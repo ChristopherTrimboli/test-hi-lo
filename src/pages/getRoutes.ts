@@ -1,6 +1,6 @@
 import { LINKS, ROUTE_PATH_KEYS } from '@local/constants';
 import { layout as homeLayout } from './home/layout';
-import { layout as aboutLayout } from './about/layout';
+import { BoardGhost } from './home/BoardGhost';
 
 export const getRoutes = () =>
 	({
@@ -12,9 +12,7 @@ export const getRoutes = () =>
 		children: {
 			home: {
 				layout: homeLayout,
-			},
-			about: {
-				layout: aboutLayout,
+				actor: BoardGhost,
 			},
 		},
 	} as const);
